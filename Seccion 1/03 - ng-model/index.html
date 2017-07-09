@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/lib/angular.min.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body>
+
+	<div class="container">
+		<h1>ng-model</h1> <!-- Nos permite enlazar a variables aunque no esten definidas -->
+		<h4>en AngularJS</h4>
+		<hr>
+		
+		<p>
+			Su nombre: {{ nombre | uppercase }}
+			<br>
+			<input type="text" ng-model="nombre" class="form-control" placeholder="Ingrese su nombre">
+		</p>
+
+		<p>
+			Selecciona un equipo: {{ equipo }}
+			<select class="form-control" ng-model="equipo">
+				<option value="1">Real Madrid</option>
+				<option value="2">Rayo Vallecano</option>
+				<option value="3">Cadiz</option>
+			</select>
+		</p>
+
+		<p>
+			Seleccione las opciones que desea: {{ opt1 }} {{ opt2 }}
+			<br>
+			<input type="checkbox" ng-model="opt1"> Opcion 1
+			<br>
+			<input type="checkbox" ng-model="opt2"> Opcion 2
+		</p>
+
+		<p>
+			Seleccione el genero: {{ genero }}
+			<br>
+			<input type="radio" value="M" ng-model="genero"> Masculino
+			<br>
+			<input type="radio" value="F" ng-model="genero"> Femenino
+		</p>
+
+	</div>
+
+</body>
+
+</html>
